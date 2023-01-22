@@ -19,7 +19,7 @@ UPSTREAM_REPO = getenv("UPSTREAM_REPO", "https://github.com/PavanMagar/CodexunMu
 USERS = getenv("5708609169")
 HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
-MONGO_DB_URI = getenv("MONGO_DB_URI")
+MONGO_DB_URI = getenv("MONGO_DB_URI", "mongodb+srv://ariyan104:ariyan104@cluster0.1iptuzv.mongodb.net/?retryWrites=true&w=majority")
 API_ID = int(getenv("API_ID", "23842900"))
 API_HASH = getenv("API_HASH", "d21e95895cf2a5b83b0167fdd3b6e541")
 OWNER_ID = int(getenv("OWNER_ID", "5761513990"))
