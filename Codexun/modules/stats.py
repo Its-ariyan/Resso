@@ -52,23 +52,23 @@ stats1 = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="System 🖥️", callback_data=f"sys_stats"
+                text="sʏsᴛᴇᴍ 🖥️", callback_data=f"sys_stats"
             ),
             InlineKeyboardButton(
-                text="Bots 🤖", callback_data=f"bot_stats"
+                text="ʙᴏᴛs 🤖", callback_data=f"bot_stats"
             ),
         ],
         [
             InlineKeyboardButton(
-                text="Assist 🙋🏻‍♂️", callback_data=f"assis_stats"
+                text="ᴀssɪsᴛᴇɴᴛ 🙋🏻‍♂️", callback_data=f"assis_stats"
             ),
             InlineKeyboardButton(
-                text="Storage 🔋", callback_data=f"sto_stats"
+                text="sᴛᴏʀᴀɢᴇ 🔋", callback_data=f"sto_stats"
             )
         ],
        [
             InlineKeyboardButton(
-                text="Close Stats 🗑️", callback_data=f"statsclose"
+                text="ᴄʟᴏsᴇ 🗑️", callback_data=f"statsclose"
             ),
         ],
     ]
@@ -78,7 +78,7 @@ statsback = InlineKeyboardMarkup(
     [
         [
             InlineKeyboardButton(
-                text="🔙 Back Home", callback_data=f"gen_stats"
+                text="🔙 ʙᴀᴄᴋ ʜᴏᴍᴇ", callback_data=f"gen_stats"
             ),
         ],
     ]
@@ -101,10 +101,10 @@ async def bot_sys_stats():
     mem = psutil.virtual_memory().percent
     disk = psutil.disk_usage("/").percent
     stats = f"""
-**• Uptime :** {get_readable_time((bot_uptime))}
-**• CPU :** {cpu}%
-**• RAM :** {mem}%
-**• Disk : **{disk}%"""
+**• ᴜᴘᴛɪᴍᴇ :** {get_readable_time((bot_uptime))}
+**• ᴄᴘᴜ :** {cpu}%
+**• ʀᴀᴍ :** {mem}%
+**• ᴅɪsᴋ : **{disk}%"""
     return stats
 
 
@@ -123,7 +123,7 @@ async def gstats(_, message):
     end = datetime.now()
     resp = (end - start).microseconds / 1000
     smex = f"""
-<u>**{BOT_NAME} General Stats 🤖**</u>
+<u>**{BOT_NAME} ɢᴇɴᴇʀᴀʟ sᴛᴀᴛs 🤖**</u>
     
 Ping: `{resp} ms`
 {uptime}
@@ -226,11 +226,11 @@ async def stats_markup(_, CallbackQuery):
         smex = f"""
 <u>**{BOT_NAME} Assistant Stats 🚶🏻**</u>
 
-**• Dialogs :** {total_ub}
-**• Groups :** {groups_ub} 
-**• Channels :** {channels_ub} 
-**• Bots :** {bots_ub}
-**• Users :** {privates_ub}"""
+**• ᴅɪᴀʟᴏɢs :** {total_ub}
+**• ɢʀᴏᴜᴘ :** {groups_ub} 
+**• ᴄʜᴀɴɴᴇʟ :** {channels_ub} 
+**• ʙᴏᴛs :** {bots_ub}
+**• ᴜsᴇʀ's :** {privates_ub}"""
         await CallbackQuery.edit_message_text(smex, reply_markup=statsback)
     if command == "gen_stats":
         start = datetime.now()
@@ -238,9 +238,9 @@ async def stats_markup(_, CallbackQuery):
         end = datetime.now()
         resp = (end - start).microseconds / 1000
         smex = f"""
-<u>**{BOT_NAME} General Stats 🤖**</u>
+<u>**{BOT_NAME} ɢᴇɴᴇʀᴀʟ sᴛᴀᴛs 🤖**</u>
 
-**Ping :** `{resp} ms`
+**ᴘɪɴɢ :** `{resp} ms`
 {uptime}
 
 **Get your needed stats from the options given below**"""
